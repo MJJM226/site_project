@@ -1,0 +1,66 @@
+body{
+    background-image: url(../img/backIMG.jpg);
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.app_hed{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #cecece;
+    border-bottom: solid 1px rgb(20, 20, 20);
+}
+
+header{
+    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.hed_icon{
+    padding-right: 50px;
+}
+
+.hed{
+    background-color: #8ccfb7;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.hed div{
+    padding: 7px;
+    background-color: #3a7862;
+    border-radius: 8px;
+    border: 2px solid #4da384;
+    transition: all 0.5s;
+}
+
+.hed a{
+    text-decoration: none;
+    color: #f2eee4;
+}
+
+.hed div:hover{
+    background-color: #2cde9e;
+    border: 2px dashed  #043d29;
+    transition: all 0.5s;
+    color: #bab7af;
+}
+
+.flor{
+    display: flex;
+    justify-content: center;
+    background-color: #3a3a3a;
+    color: #bbbbbb;
+    height: 150px;
+}

@@ -1,0 +1,12 @@
+.PositionContent{
+    display: flex;
+    justify-content: center;
+}
+
+
+.PageContent{
+    display: flex;
+    
+    width: 75%;
+    background-color: #C5C5C5;
+}
