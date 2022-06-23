@@ -9,18 +9,10 @@ body{
   background-size: cover;
 }
 
-.app_hed{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: #cecece;
-    border-bottom: solid 1px rgb(20, 20, 20);
-}
-
 header{
     display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hed_icon{
