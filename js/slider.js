@@ -48,7 +48,7 @@ class ChiefSlider {
     this._config = {
       loop: true,
       autoplay: true,
-      interval: 7000,
+      interval: 5000,
       refresh: true,
       swipe: true,
     };

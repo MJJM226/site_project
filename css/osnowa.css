@@ -52,7 +52,21 @@ header{
 .flor{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     background-color: #3a3a3a;
     color: #bbbbbb;
     height: 150px;
+}
+
+.icon-flor{
+    display: flex;
+}
+
+.info-flor p{
+    margin: 10px;
+}
+
+.info-flor img{
+    height: 50px;
+    margin-left: 8px;
 }
