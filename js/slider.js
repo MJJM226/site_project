@@ -402,6 +402,54 @@ class ChiefSlider {
     }
   }
 
+  _moveToPrev() {
+    this._direction = 'prev';
+    this._move();
+  }
+  _moveTo(index) {
+    const $indicatorList = this._$indicatorList;
+    let nearestIndex = null;
+    let diff = null;
+    let i;
+    let length;
+    for (i = 0, length = $indicatorList.length; i < length; i++) {
+      const $indicator = $indicatorList[i];
+      if ($indicator.classList.contains(CLASS_INDICATOR_ACTIVE)) {
+        const slideTo = +$indicator.dataset.slideTo;
+        if (diff === null) {
+          nearestIndex = slideTo;
+          diff = Math.abs(index - nearestIndex);
+        } else if (Math.abs(index - slideTo) < diff) {
+          nearestIndex = slideTo;
+          diff = Math.abs(index - nearestIndex);
+        }
+      }
+    }
+    diff = index - nearestIndex;
+    if (diff === 0) {
+      return;
+    }
+    this._direction = diff > 0 ? 'next' : 'prev';
+    for (i = 1; i <= Math.abs(diff); i++) {
+      this._move();
+    }
+  }
+  _autoplay(action) {
+    if (!this._config.autoplay) {
+      return;
+    }
+    if (action === 'stop') {
+      clearInterval(this._intervalId);
+      this._intervalId = null;
+      return;
+    }
+    if (this._intervalId === null) {
+      this._intervalId = setInterval(() => {
+        this._direction = 'next';
+        this._move();
+      }, this._config.interval);
+    }
+  }
 
   _refresh() {
     // create some constants
