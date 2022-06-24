@@ -19,6 +19,11 @@ header{
     padding-right: 50px;
 }
 
+.hed img{
+    height: 50px;
+}
+
+
 .hed{
     background-color: #8ccfb7;
     margin-top: 25px;
